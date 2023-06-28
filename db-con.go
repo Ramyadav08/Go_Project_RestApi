@@ -9,7 +9,7 @@ import (
 
 var DataBase *gorm.DB
 var err error
-var urlDns="root:@Ram81718@tcp(127.0.0.1:3306)/ramdb"
+var urlDns="root:@Ram81718@tcp(127.0.0.1:3306)/ramdb?parseTime=true"
 
 func DataMigration() {
 	DataBase,err=gorm.Open(mysql.Open(urlDns),&gorm.Config{})
